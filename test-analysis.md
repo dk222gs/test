@@ -34,7 +34,14 @@ CHANGE to wiki content
 * [Test Summary](#Test Summary)
 
 ##### Test Levels
-
+In order to test all relevant levels we will make us of the following:
+- Unit test
+   - The unit tests will ensure that the code is developed correctly and that it follows the intended logic. 
+- Integration test
+    - Integrations testing makes sure that components in the app works togheter.
+- System test
+  - System test makes sure that all the components in the system works togheter.
+  
 ##### Roles and Responsibilities
 
 ##### Environment Requirements

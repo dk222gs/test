@@ -18,7 +18,7 @@ ___
 
 ## Test Strategy
 ####   Contents
-CHANGE to wiki content
+
 * [Test Levels](#Test Levels)
 * [Roles and Responsibilities](#Roles and Responsibilities)
 * [Environment Requirements](#Environment Requirements)

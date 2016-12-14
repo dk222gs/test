@@ -170,6 +170,27 @@ The resources allocated to this testing project is the following:
 ---
 # Test Plan
 
+### Contents
+* [Introduction](#1-introduction)
+* [Purpose](#purpose)
+* [Project Overview](#project-overview)
+* [Testing objectives](#2-testing-objectives)
+* [Features to be tested](#features-to-be-tested)
+* [Features Not to be tested and constraints](#features-not-to-be-tested-and-constraints)
+* [Testing Approach](#3-testing-approach)
+* [Static Testing](#static-testing)
+* [Component Testing](#component-testing)
+* [System Testing](#system-testing)
+* [User Acceptance Testing (UAT)](#user-acceptance-testing-uat)
+* [Defect Management](#4-defect-management)
+* [Defect Status](#defect-status)
+* [Defect Severity Levels](#defect-severity-levels)
+* [Test Activities and Schedules](#5-test-activities-and-schedules)
+* [Test Deliverables](#6-test-deliverables)
+* [Test Reporting](#7-test-reporting)
+* [Testing Resources](#8-testing-resources)
+* [Testing Tools](#9-testing-tools)
+
 ## 1. Introduction
 This test plan document describes the scope, approach, resources and schedule of intended testing activities to be undertaken for MyWebServer. This document should be read in conjunction with the Test Strategy.
 
@@ -189,18 +210,29 @@ The project consists of a pre-developed web server called MyWebServer.
 The objective with the tests is to deliver a easy to deploy, well tested, open source, web server that support multiple platforms.
 
 The requirements that the product shall provide are the following:
-Req 1. The web server should be responsive under high load.
-Req 2. The web server must follow minimum requirements for HTTP 1.1
-Req 3. The web server must work on Linux, Mac, Windows*.
-Req 4. The source code should be released under GPL-2.0.
-Req 5. The access log should be viewable from a text editor.
-* XP, Vista, 7, 8, 10, Server 2008
+- Req 1. The web server should be responsive under high load.
+- Req 2. The web server must follow minimum requirements for HTTP 1.1
+- Req 3. The web server must work on Linux, Mac, Windows*.
+- Req 4. The source code should be released under GPL-2.0.
+- Req 5. The access log should be viewable from a text editor.
+
+*XP, Vista, 7, 8, 10, Server 2008
 
 ### Features to be tested
-<list of features to be tested for this cycle>
+- Req 1. The web server should be responsive under high load.
+- Req 2. The web server must follow minimum requirements for HTTP 1.1
+- Req 3. The web server must work on Mac. (Part of Req 3.)
+- Req 4. The source code should be released under GPL-2.0.
+- Req 5. The access log should be viewable from a text editor.
+
+*XP, Vista, 7, 8, 10, Server 2008
 
 ### Features Not to be tested and constraints
-<list of features not to be tested and any limitations for partial implementation>
+- Req 3. The web server must work on Linux, Windows*. (Part of Req 3.)
+
+*XP, Vista, 7, 8, 10, Server 2008
+
+This requirement cannot be tested due to the Test Lead does not have the correct hardware/environment to perform this test. 
 
 ## 3. Testing Approach
 
@@ -212,44 +244,44 @@ Component level testing focuses on the functionality of each component being dev
 
 #### Entry Criteria
 Component Testing may commence when the following criteria have been satisfied:
-1. All codes have been unit tested and passed.
-2. Test environment including software have been setup and configured correctly.
+ - All codes have been unit tested and passed.
+ - Test environment including software have been setup and configured correctly.
 
 #### Suspension Criteria
 Component testing will be suspended under the following condition:
-1. Critical error(s) found preventing test completion.
-2. Change of business requirements.
-3. Change of environment components or technology including different version.
+ - Critical error(s) found preventing test completion.
+ - Change of business requirements.
+ - Change of environment components or technology including different version.
 
 #### Resumption Criteria
 Component testing will resume when the following criteria are met:
-1. All issues in suspension criteria have been resolved or mitigated
-2. New build with fixed Critical and Medium severity defects has been delivered to test.
+ - All issues in suspension criteria have been resolved or mitigated
+ - New build with fixed Critical and Medium severity defects has been delivered to test.
 
 #### Exit Criteria (Test Completeness)
 Component testing can be considered complete when the following conditions have been met:
-1. All High and Medium priority requirements have been tested without Critical or Medium severity defects.
+ - All High and Medium priority requirements have been tested without Critical or Medium severity defects.
 
 ### **System Testing**
 The purpose of the system testing is to validate that the complete and integrated system complies with functional requirements and business requirements.
 
 #### Entry Criteria
 System testing may commence when the following criteria have been satisfied:
-1. Component Testing has been completed.
+ - Component Testing has been completed.
 
 #### Suspension Criteria
 System Testing will be suspended under the following condition:
-1. Critical error(s) found affecting functionality of the whole system.
+ - Critical error(s) found affecting functionality of the whole system.
 
 #### Resumption Criteria
 System Testing will resume when the following criteria have been satisfied:
-1. All issues in suspension criteria have been resolved or mitigated
-32. New build with fixed Critical and Medium severity defects has been delivered to test.
+ - All issues in suspension criteria have been resolved or mitigated
+ - New build with fixed Critical and Medium severity defects has been delivered to test.
 
 #### Exit Criteria (Test Completeness)
 System Testing will be considered complete when the following conditions have been met:
-1. All High and Medium priority requirements have been tested without Critical or Medium severity defects.
-2. All defects found during testing have been recorded in the test report.
+ - All High and Medium priority requirements have been tested without Critical or Medium severity defects.
+ - All defects found during testing have been recorded in the test report.
 
 ### **User Acceptance Testing (UAT)**
 UAT is a formal testing with respect to user needs, business requirements and expectations. The idea here is to gain confidence from business owner on the software being developed. Although it is not mandatory business owner(s) and/or business user(s) are expected to produce his/her own test scenarios.
@@ -288,9 +320,9 @@ Every defect must be assigned a severity level according to the following table.
 
 ## 6. Test Deliverables
 Testing Team will provide specific deliverables during the project.  These deliverables fall into the following basic categories: 
-1. Test Strategy and Test Plan 
-2. Test Cases
-3. Test Report
+ - Test Strategy and Test Plan 
+ - Test Cases
+ - Test Report
 
 ## 7. Test Reporting
 The following test report will be delivered:
@@ -305,9 +337,11 @@ Responsible for the complete test project.
 | Name                   | Description                                                                                                                                                                                      |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | JUnit                  | Is used for unit/component testing                                                                                                                                                               |
+| JMeter                 | Is used for load testing the webserver                                                                                                                                                           |
 | Postman                | Used for manually testing requests against the webserver                                                                                                                                         |
 | Chrome Developer Tools | Is used to inspect information in the request/responses in the webserver                                                                                                                         |
 | Charles Proxy          | Is used to inspect information in the request/responses in the webserver. Easier to save history and to inspect more details than Chrome Developer Tools, it also works for both HTTP and HTTPS. |
+
 
 
 

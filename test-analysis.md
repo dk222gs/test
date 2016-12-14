@@ -137,12 +137,19 @@ The following test environments will be used:
 | Automated | SauceLabs        | Cloud service that provides images for all different operating systems that we need.  Linux, Mac, Windows XP, Vista, 7, 8, 10, Server 2008 |
 | Manual    | OSX              | MacBook Pro with OSX and Chrome webbrowser                                                                                                 | 
 
-##### Test Summary
+### Testing risks and mitigation
+Some risks are identified:
+ - The test lead that will execute test cases only have OSX as test enironment.
+ - Since this is a fiction test Strategy the automated tests will run locally on the Test Leads OSX machine.
 
+### Test reports and sign off procedure
+These following artifacts will delivered as a sign off procedure:
+- Test strategy
+- Test plan 
+- Test cases 
+- Test report
 
-## Test Plan
-
-## Test Cases
-
-## Test Report
+### Staff Resources
+The resources allocated to this testing project is the following:
+ - Test Lead, allocated one man week (40 hours) 
 

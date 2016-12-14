@@ -18,7 +18,6 @@ ___
 
 ## Test Strategy
 ####   Contents
-
 * [Test Levels](#Test Levels)
 * [Roles and Responsibilities](#Roles and Responsibilities)
 * [Environment Requirements](#Environment Requirements)
@@ -33,20 +32,40 @@ ___
 * [Requirements traceability matrix](#Requirements traceability matrix)
 * [Test Summary](#Test Summary)
 
-##### Test Levels
-In order to test all relevant levels we will make us of the following:
-- Unit test
-   - The unit tests will ensure that the code is developed correctly and that it follows the intended logic. 
-- Integration test
-    - Integrations testing makes sure that components in the app works togheter.
-- System test
-  - System test makes sure that all the components in the system works togheter.
+##### Roles
+**Test lead**: Responsible for testing and for creating this documentation
+**Product owener:** Expert in the bussiness logic for Software Development Company (SDC).
+
+##### Purpose
+This document is a high level presentation of the test approach to be undertaken in relation to the MyWebServer. Once formally accepted by the product owner at Software Development Company (SDC), this document will be used as a reference the test lead to develop a Test Plan with details of test activities resourcing and schedules.
+
+This Test Strategy will underpin all subsequent testing activities and as such is presented for product owner at SDC for sign off as approval of the proposed approach.
   
-##### Roles and Responsibilities
+##### Project Overview
+The project consists of a pre-developed web server called MyWebServer. 
 
-##### Environment Requirements
+##### Testing objectives
+The objective with the tests is to deliver a easy to deploy, well tested, open source, web server that support multiple platforms.
 
-##### Testing Tools
+The requirements that the product shall provide are the following:
+Req 1. The web server should be responsive under high load.
+Req 2. The web server must follow minimum requirements for HTTP 1.1
+Req 3. The web server must work on Linux, Mac, Windows*.
+Req 4. The source code should be released under GPL-2.0.
+Req 5. The access log should be viewable from a text editor.
+* XP, Vista, 7, 8, 10, Server 2008
+
+##### Test levels
+Test levels are used to split testing phase into logical phases and set clear boundaries for each level of testing. In this project we will test the following three levels:
+- Component testing/Unit testing
+- System testing
+- User Acceptance Testing (UAT)
+
+**Component testing** relates to the testing of individual software components i.e. unittests created by developers. In the MyWebServer code base there are already pre-existing unittests that coveres all the component testing we need.
+
+**System testing** is done to ensure that the whole system works when integrated.  
+
+**User Acceptance Testing** is done togheter with the product owner to establish confidence in the system. The product owner will also help to create test cases with help from the expert bussiness logic knowledge that he pocess.
 
 ##### Risks and Mitigation
 

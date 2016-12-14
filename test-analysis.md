@@ -32,6 +32,11 @@ ___
 * [Requirements traceability matrix](#Requirements traceability matrix)
 * [Test Summary](#Test Summary)
 
+### Related documents
+| #Ref | Document                  |
+|------|---------------------------|
+| 01   | WebServerRequirements.pdf |
+
 ### Roles
 **Test lead**: Responsible for testing and for creating this documentation
 **Product owener:** Expert in the bussiness logic for Software Development Company (SDC).
@@ -67,11 +72,28 @@ Test levels are used to split testing phase into logical phases and set clear bo
 
 **User Acceptance Testing** is done togheter with the product owner to establish confidence in the system. The product owner will also help to create test cases with help from the expert bussiness logic knowledge that he pocess.
 
-##### Risks and Mitigation
+### Test types
+This table describes all the types of testing that shall be performed for the different levels.
 
-##### Test Schedule
+| Test Types          | Component Testing | System Testing | UAT |
+|---------------------|-------------------|----------------|-----|
+| Static test         | Yes               |                |     |
+| Functional test     | Yes               | Yes            | Yes |
+| Non-functional test |                   | Yes            | Yes |
+| Security test       |                   |                | Yes |
+| Negative test       | Yes               | Yes            |     |
 
-##### Regression test approach
+All component tests and some of the system tests will be automated.
+
+##### Pass/fail criteria
+Test Scripts will be developed as a part of every test case. The test scripts will contain test steps, expected results, pass criteria and fail criteria. 
+Broadly speaking, deviation from what is written in a functional / technical specification will be considered a defect. A defect might not always result in failure.
+Where a defect is identified, a defect record will be raised for each deviation between the test result and the expected result recorded in the test scripts, which are in turn based on the relevant functional / technical specification. 
+If the incident is investigated and found not to be an error, the defect will be assigned back to the test lead for closure. 
+If the incident is found to be a real error, it will be prioritised based on input from the relevant developers and product owner.
+
+##### Entry Criteria
+Since the product is already created and we have the requirements in the document WebServerRequirements(#Ref-01) we can start testing immediately.
 
 ##### Test Groups
 

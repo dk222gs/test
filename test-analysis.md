@@ -32,19 +32,19 @@ ___
 * [Requirements traceability matrix](#Requirements traceability matrix)
 * [Test Summary](#Test Summary)
 
-##### Roles
+### Roles
 **Test lead**: Responsible for testing and for creating this documentation
 **Product owener:** Expert in the bussiness logic for Software Development Company (SDC).
 
-##### Purpose
+### Purpose
 This document is a high level presentation of the test approach to be undertaken in relation to the MyWebServer. Once formally accepted by the product owner at Software Development Company (SDC), this document will be used as a reference the test lead to develop a Test Plan with details of test activities resourcing and schedules.
 
 This Test Strategy will underpin all subsequent testing activities and as such is presented for product owner at SDC for sign off as approval of the proposed approach.
   
-##### Project Overview
+### Project Overview
 The project consists of a pre-developed web server called MyWebServer. 
 
-##### Testing objectives
+### Testing objectives
 The objective with the tests is to deliver a easy to deploy, well tested, open source, web server that support multiple platforms.
 
 The requirements that the product shall provide are the following:
@@ -55,7 +55,7 @@ Req 4. The source code should be released under GPL-2.0.
 Req 5. The access log should be viewable from a text editor.
 * XP, Vista, 7, 8, 10, Server 2008
 
-##### Test levels
+### Test levels
 Test levels are used to split testing phase into logical phases and set clear boundaries for each level of testing. In this project we will test the following three levels:
 - Component testing/Unit testing
 - System testing

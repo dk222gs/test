@@ -121,6 +121,7 @@ Tests iterations will be done in two iterations, since the product is already de
 ### Defect Management
 The detection, management and resolution of defects will be properly created and progressed using JIRA.
 All defects must be assessed to determine a severity level as described in the table below.
+
 | Severity | Severity Description               |
 |----------|------------------------------------|
 | High     | MyWebServer crashes                |
@@ -130,6 +131,7 @@ All defects must be assessed to determine a severity level as described in the t
 
 ### Test Environment
 The following test environments will be used:
+
 | Type      | Test environment | Description                                                                                                                                |
 |-----------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Automated | SauceLabs        | Cloud service that provides images for all different operating systems that we need.  Linux, Mac, Windows XP, Vista, 7, 8, 10, Server 2008 |

@@ -3,7 +3,7 @@ Prepared by: _John Doe (Test-Lead)_
 Version: 1.0.0
 Project name: MyWebServer-Test-Analysis
 
-### Introduction
+### Abstract
 
 This report contains a detailed test analysis for the web server application MyWebServer.
 
@@ -18,9 +18,9 @@ ___
 
 ## Test Strategy
 ####   Contents
-* [Test Levels](#Test Levels)
-* [Roles and Responsibilities](#Roles and Responsibilities)
-* [Environment Requirements](#Environment Requirements)
+* [Related documents](###Related documents)
+* [Glossary](###Glossary)
+* [Roles](###Roles)
 * [Testing Tools](#Testing Tools)
 * [Risks and Mitigation](#Risks and Mitigation)
 * [Test Schedule](#Test Schedule)
@@ -32,7 +32,7 @@ ___
 * [Requirements traceability matrix](#Requirements traceability matrix)
 * [Test Summary](#Test Summary)
 
-### Related documents
+## 1. Related documents
 | #Ref | Document                  |
 |------|---------------------------|
 | 01   | WebServerRequirements.pdf |
@@ -42,9 +42,11 @@ ___
 |------|--------------------------|
 | JIRA | Incident management tool |
 
-### Roles
+## 2. Roles
 **Test lead**: Responsible for testing and for creating this documentation
 **Product owener:** Expert in the bussiness logic for Software Development Company (SDC).
+
+## 3. Introduction
 
 ### Purpose
 This document is a high level presentation of the test approach to be undertaken in relation to the MyWebServer. Once formally accepted by the product owner at Software Development Company (SDC), this document will be used as a reference the test lead to develop a Test Plan with details of test activities resourcing and schedules.
@@ -64,6 +66,8 @@ Req 3. The web server must work on Linux, Mac, Windows*.
 Req 4. The source code should be released under GPL-2.0.
 Req 5. The access log should be viewable from a text editor.
 * XP, Vista, 7, 8, 10, Server 2008
+
+## 4. Test levels and test types
 
 ### Test levels
 Test levels are used to split testing phase into logical phases and set clear boundaries for each level of testing. In this project we will test the following three levels:
@@ -90,7 +94,7 @@ This table describes all the types of testing that shall be performed for the di
 
 All component tests and some of the system tests will be automated.
 
-### Pass/Fail criteria
+## 5. Pass/Fail criteria
 Test Scripts will be developed as a part of every test case. The test scripts will contain test steps, expected results, pass criteria and fail criteria. 
 Broadly speaking, deviation from what is written in a functional / technical specification will be considered a defect. A defect might not always result in failure.
 Where a defect is identified, a defect record will be raised for each deviation between the test result and the expected result recorded in the test scripts, which are in turn based on the relevant functional / technical specification. 
@@ -107,14 +111,14 @@ These are the minimum acceptable conditions before promoting the MyWebServer sol
 - All Test Cases have been successfully executed
 - Test coverage of 80% has been completed
 
-## 4. Project Conditions
+## 6. Project Conditions
 ### Assumptions
 The following assumptions have been made in preparing this test strategy:
 - The test environment will be available at the start of the testing period.
 - Technical resources will be available to provide support for the resolution of project issues/defects.
 - The requirements in WebServerRequirement(#Ref-01) are not to be changed.
 
-## 5. Proposed testing approach
+## 7. Proposed testing approach
 ### Test iterations and deadlines
 Tests iterations will be done in two iterations, since the product is already developed we need one iteration to identify errors and another to rerun the tests after issues are fixed. The test plan will prioritise testing and include dates.
 

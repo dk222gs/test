@@ -257,3 +257,57 @@ UAT is a formal testing with respect to user needs, business requirements and ex
 ## 4. Defect Management
 #### Defect Status
 Every defect must be assigned a status to identify its place in the defect management workflow.
+
+| Status      | Description                                                         |
+|-------------|---------------------------------------------------------------------|
+| New         | Issue created                                                       |
+| Active      | Issue assigned to dev                                               |
+| Resolved    | Issue fixed and delivered to test                                   |
+| Investigate | Issue needs investigation before it can get status Active or Closed |
+| Closed      | Issue will not be fixed or is marked as a non issue                 |
+
+#### Defect Severity Levels
+Every defect must be assigned a severity level according to the following table. If the tester is unsure what level to assign to a defect, then advice must be taken from the product owner.
+
+| Level | Description |
+|-------|-------------|
+| 1     | High        |
+| 2     | Medium      |
+| 3     | Low         |
+
+## 5. Test Activities and Schedules
+#### Week 1 (12/Dec/16 - 16/Dec/16)
+
+| Activities            | Exit Criteria               | Priority | Status | Responsible Resource |
+|-----------------------|-----------------------------|----------|--------|----------------------|
+| Develop Test Strategy | Document completed          | High     | Done   | Test Lead            |
+| Develop Test Plan     | Document completed          | High     | Done   | Test Lead            |
+| Develop Test Cases    | Test case scripts completed | High     | Done   | Test Lead            |
+| Execute Test Cases    | All test cases executed     | High     | Done   | Test Lead            |
+| Write Test Report     | Document completed          | High     | Done   | Test Lead            |
+
+## 6. Test Deliverables
+Testing Team will provide specific deliverables during the project.  These deliverables fall into the following basic categories: 
+1. Test Strategy and Test Plan 
+2. Test Cases
+3. Test Report
+
+## 7. Test Reporting
+The following test report will be delivered:
+- A Final Test Summary Report will be issued by the Test Leas. It will certify the extent to which testing has been completed.
+
+## 8. Testing Resources
+John Doe - Test Lead
+Responsible for the complete test project.
+
+## 9. Testing Tools
+
+| Name                   | Description                                                                                                                                                                                      |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| JUnit                  | Is used for unit/component testing                                                                                                                                                               |
+| Postman                | Used for manually testing requests against the webserver                                                                                                                                         |
+| Chrome Developer Tools | Is used to inspect information in the request/responses in the webserver                                                                                                                         |
+| Charles Proxy          | Is used to inspect information in the request/responses in the webserver. Easier to save history and to inspect more details than Chrome Developer Tools, it also works for both HTTP and HTTPS. |
+
+
+

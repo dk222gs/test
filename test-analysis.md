@@ -5,18 +5,18 @@ Project name: MyWebServer-Test-Analysis
 
 ### Abstract
 
-This report contains a detailed test analysis for the web server application MyWebServer.
+This report contains a detailed test strategy, test plan, test cases and test report for the web server application MyWebServer.
 
 
 ###  Table of contents
-* [Test Strategy](#Test Strategy)
-* [Test Plan](#Test Plan)
+* [Test Strategy](#test-strategy)
+* [Test Plan](#test-plan)
 * [Test Cases](#Test Cases)
 * [Test Report](#Test Report)
 
 ___
 
-## Test Strategy
+# Test Strategy
 ####   Contents
 * [Related documents](#1-related-documents)
 * [Glossary](#glossary)
@@ -166,3 +166,94 @@ These following artifacts will delivered as a sign off procedure:
 The resources allocated to this testing project is the following:
  - Test Lead, allocated one man week (40 hours) 
 
+----
+---
+# Test Plan
+
+## 1. Introduction
+This test plan document describes the scope, approach, resources and schedule of intended testing activities to be undertaken for MyWebServer. This document should be read in conjunction with the Test Strategy.
+
+### Purpose
+This document provides the following guidance:
+- Testing Scope
+- Entry and exit criteria for each test level
+- A description of resources and tools to be used to conduct testing;
+- An overview of test schedules per development cycle;
+- An overview of the types of testing that is to be conducted;
+- Defect management work flow.
+
+### Project Overview
+The project consists of a pre-developed web server called MyWebServer.
+
+## 2. Testing objectives
+The objective with the tests is to deliver a easy to deploy, well tested, open source, web server that support multiple platforms.
+
+The requirements that the product shall provide are the following:
+Req 1. The web server should be responsive under high load.
+Req 2. The web server must follow minimum requirements for HTTP 1.1
+Req 3. The web server must work on Linux, Mac, Windows*.
+Req 4. The source code should be released under GPL-2.0.
+Req 5. The access log should be viewable from a text editor.
+* XP, Vista, 7, 8, 10, Server 2008
+
+### Features to be tested
+<list of features to be tested for this cycle>
+
+### Features Not to be tested and constraints
+<list of features not to be tested and any limitations for partial implementation>
+
+## 3. Testing Approach
+
+### **Static Testing**
+Static testing is testing of a component or specifications without execution of that software. This is usually done as soon as acceptance criteria or business requirements are ready for review before code implementation such as conflicting rules, invalid data types, redundant process just to name a few.
+
+### **Component Testing**
+Component level testing focuses on the functionality of each component being developed. This is crucial where different components are being developed before they are integrated together as one system.
+
+#### Entry Criteria
+Component Testing may commence when the following criteria have been satisfied:
+1. All codes have been unit tested and passed.
+2. Test environment including software have been setup and configured correctly.
+
+#### Suspension Criteria
+Component testing will be suspended under the following condition:
+1. Critical error(s) found preventing test completion.
+2. Change of business requirements.
+3. Change of environment components or technology including different version.
+
+#### Resumption Criteria
+Component testing will resume when the following criteria are met:
+1. All issues in suspension criteria have been resolved or mitigated
+2. New build with fixed Critical and Medium severity defects has been delivered to test.
+
+#### Exit Criteria (Test Completeness)
+Component testing can be considered complete when the following conditions have been met:
+1. All High and Medium priority requirements have been tested without Critical or Medium severity defects.
+
+### **System Testing**
+The purpose of the system testing is to validate that the complete and integrated system complies with functional requirements and business requirements.
+
+#### Entry Criteria
+System testing may commence when the following criteria have been satisfied:
+1. Component Testing has been completed.
+
+#### Suspension Criteria
+System Testing will be suspended under the following condition:
+1. Critical error(s) found affecting functionality of the whole system.
+
+#### Resumption Criteria
+System Testing will resume when the following criteria have been satisfied:
+1. All issues in suspension criteria have been resolved or mitigated
+32. New build with fixed Critical and Medium severity defects has been delivered to test.
+
+#### Exit Criteria (Test Completeness)
+System Testing will be considered complete when the following conditions have been met:
+1. All High and Medium priority requirements have been tested without Critical or Medium severity defects.
+2. All defects found during testing have been recorded in the test report.
+
+### **User Acceptance Testing (UAT)**
+UAT is a formal testing with respect to user needs, business requirements and expectations. The idea here is to gain confidence from business owner on the software being developed. Although it is not mandatory business owner(s) and/or business user(s) are expected to produce his/her own test scenarios.
+
+## 4. Defect Management
+#### Defect Status
+Every defect must be assigned a status to identify its place in the defect management workflow.

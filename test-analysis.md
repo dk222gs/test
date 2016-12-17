@@ -362,6 +362,7 @@ Eclipse is installed.
 4. Select tab *Arguments*.
 5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
 6. Click button *Run*
+
 ##### Expected Result:
 * A web server has been started
 * A note in the access log was written, that the server was started i.e.:
@@ -386,6 +387,7 @@ Eclipse is installed.
 4. Select tab *Arguments*.
 5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
 6. Click button *Run*
+
 ##### Expected Result:
 * No new webserver will be started
 * A note in the access log was written, that the port is taken i.e.:
@@ -393,7 +395,3 @@ Eclipse is installed.
 HTTP Server object constructed
 Port is taken
 ```
-
-
-
-

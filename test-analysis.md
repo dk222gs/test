@@ -342,6 +342,58 @@ Responsible for the complete test project.
 | Chrome Developer Tools | Is used to inspect information in the request/responses in the webserver                                                                                                                         |
 | Charles Proxy          | Is used to inspect information in the request/responses in the webserver. Easier to save history and to inspect more details than Chrome Developer Tools, it also works for both HTTP and HTTPS. |
 
+----
+----
+
+# Test Cases
+
+### TC1 - Start Web Server
+Description: Administrator should successfully start the webserver.
+##### Preconditions: 
+ - User have admin priviledges
+ - MyWebServer project is opened as a project in eclipse
+##### Assumption: 
+Eclipse is installed.
+
+##### Test Steps:
+1. Open Run Configurations
+2. Create a new Java Application Configuration.
+3. Choose **se.lnu.http.HTTPServerConsole** as *Main class* under tab *Main*.
+4. Select tab *Arguments*.
+5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
+6. Click button *Run*
+##### Expected Result:
+* A web server has been started
+* A note in the access log was written, that the server was started i.e.:
+```bash 
+HTTP Server object constructed
+HTTP Server started
+Accept
+```
+### TC2 - Start Web Server
+Description: Administrator should successfully start the webserver.
+##### Preconditions: 
+ - User have admin priviledges
+ - MyWebServer project is opened as a project in eclipse
+ - MyWebServer is started on port *1091*
+##### Assumption: 
+Eclipse is installed.
+
+##### Test Steps:
+1. Open Run Configurations
+2. Create a new Java Application Configuration.
+3. Choose **se.lnu.http.HTTPServerConsole** as *Main class* under tab *Main*.
+4. Select tab *Arguments*.
+5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
+6. Click button *Run*
+##### Expected Result:
+* No new webserver will be started
+* A note in the access log was written, that the port is taken i.e.:
+```bash 
+HTTP Server object constructed
+Port is taken
+```
+
 
 
 

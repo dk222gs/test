@@ -373,8 +373,8 @@ HTTP Server object constructed
 HTTP Server started
 Accept
 ```
-### TC2 - Start Web Server
-Description: Administrator should successfully start the webserver.
+### TC2 - Start Web Server - Alt. scenario 1
+Description: The web server could not be started due to socket was taken
 
 ##### Preconditions: 
  - User have admin priviledges
@@ -397,9 +397,86 @@ Eclipse is installed.
 * A note in the access log was written, that the port is taken i.e.:
 ```bash 
 HTTP Server object constructed
-Port is taken
+Socket 1091 was taken
 ```
 
+### TC3 - Start Web Server - Alt scenario 2
+Description: The web server could not be started due restriction on the shared resource container
+
+##### Preconditions: 
+ - User have admin priviledges
+ - MyWebServer project is opened as a project in eclipse
+
+##### Assumption: 
+Eclipse is installed.
+
+##### Test Steps:
+1. Open console and goto: *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http
+2. Run the following command: ``` chmod 0600 resources```
+2. Open Run Configurations
+2. Create a new Java Application Configuration.
+3. Choose **se.lnu.http.HTTPServerConsole** as *Main class* under tab *Main*.
+4. Select tab *Arguments*.
+5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
+6. Click button *Run*
+
+##### Expected Result:
+* The webserver could not be started
+* The following message will be displayed in the console: 
+```bash 
+No access to folder *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
+```
+
+##### Cleanup:
+1. Open console and goto: *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http
+2. Run the following command: ``` chmod 0755 resources```
+
+### TC4 - Start Web Server - Alt scenario 3
+Description: The access log could not be written to *path_to_MyWebServer_project_root*/logs
+
+##### Preconditions: 
+ - User have admin priviledges
+ - MyWebServer project is opened as a project in eclipse
+
+##### Assumption: 
+Eclipse is installed.
+
+##### Test Steps:
+1. Open console and goto: *path_to_MyWebServer_project_root*
+2. Run the following command: ``` chmod 0600 logs```
+2. Open Run Configurations
+2. Create a new Java Application Configuration.
+3. Choose **se.lnu.http.HTTPServerConsole** as *Main class* under tab *Main*.
+4. Select tab *Arguments*.
+5. Under *Program Arguments* add the following arguments: 1091 *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner
+6. Click button *Run*
+
+##### Expected Result:
+* The webserver is started
+* No access log could be created by server in directory *path_to_MyWebServer_project_root*/logs
+
+##### Cleanup:
+1. Open console and goto: *path_to_MyWebServer_project_root*
+2. Run the following command: ``` chmod 0755 logs```
+
+### TC5 - Stop Web Server
+Description: A user successfully stops the web server.
+
+##### Preconditions: 
+ - User have admin priviledges
+ - MyWebServer project is started in eclipse
+
+##### Assumption: 
+Eclipse is installed.
+
+##### Test Steps:
+1. Open up the eclipse workspace where the MyWebServer is running.
+2. Make sure that the console view is opened and that it is in focus.
+3. Click the red square shaped button (tooltop text: terminate).
+
+##### Expected Result:
+* The webserver is stopped
+* A note in the access log was written, that the server was stopped.
 
 
 

@@ -467,7 +467,7 @@ Description: A user successfully stops the web server.
  - MyWebServer project is started in eclipse
 
 ##### Assumption: 
-Eclipse is installed.
+Eclipse is installed and started.
 
 ##### Test Steps:
 1. Open up the eclipse workspace where the MyWebServer is running.
@@ -477,6 +477,48 @@ Eclipse is installed.
 ##### Expected Result:
 * The webserver is stopped
 * A note in the access log was written, that the server was stopped.
+
+### TC6 - Request shared resource
+Description: A resource is successfully shared with the browser.
+
+##### Preconditions: 
+ - Chrome browser is used.
+ - MyWebServer project is started on port `1091` in eclipse.
+
+##### Assumption: 
+Chrome is opened.
+
+##### Test Steps:
+1. Browse to `localhost:1091`
+
+##### Expected Result:
+* * Chrome browser shall show the text `It works`, the image works.png and the imaget works2.png.
+
+* In eclipse, in the console view shall show information that access happened with request information and the result of the request.
+
+### TC7 - Request shared resource - Alt scenario 1
+Description: A shared resource cannot be found.
+
+##### Preconditions: 
+ - Chrome browser is used.
+ - MyWebServer project is started on port `1091` in eclipse.
+
+##### Assumption: 
+Chrome is opened with the developer tools `network`tab in focus.
+
+##### Test Steps:
+1. Rename the file *path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner/images/works.png to temp.png
+2. Browse to `localhost:1091`
+
+##### Expected Result:
+* Chrome browser shall show the text `It works`and the image works2.png.
+
+* The network tab shall show the status of the requests made to the server by the browser where the following shall apply:
+  - ``` Request URL: http://localhost:1091/ ``` shall have status code `200`
+  - ``` Request URL: http://localhost:1091/images/works.png``` shall have status code `404`
+  - ``` Request URL:http://localhost:1091/images/works2.png```shall have the status code `200`
+
+
 
 
 

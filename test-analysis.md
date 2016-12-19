@@ -547,9 +547,40 @@ Chrome is opened with the developer tools `network`tab in focus.
 * Chrome browser shall show the text `It works`and the image works2.png.
 * The log displayed in the eclipse `console`tab shall display `resource work.png is forbidden since it is not in the shared resources directory`
 
+### TC9 - Request shared resource - Alt scenario 3
+Description: A shared resource request is invalid or malformed.
 
+##### Preconditions: 
+  - MyWebServer project is started on port `1091` in eclipse.
 
+##### Assumption: 
+The user have access to use curl commands on client.
 
+##### Test Steps:
+1. Open console/terminal
+2. Enter the following command: `curl localhost:1091 http://localhost:works.png --header "Content-Type:application/json"`
+
+##### Expected Result:
+* The following html shall be displayed in the console:
+```html 
+<html><body><h1>400 Bad request</h1></body></html><html><body><h1>400 Bad request</h1></body></html> 
+```
+
+### TC10 - Request shared resource - Alt scenario 4
+Description: The server encounters an error when trying to process the request.
+
+##### Preconditions: 
+  - MyWebServer project is started on port `1091` in eclipse.
+
+##### Assumption: 
+The user have access to use curl commands on client.
+
+##### Test Steps:
+1. Open console/terminal
+2. Use curl to invoke error on server.
+
+##### Expected Result:
+* The console should display that you get a response code `500`back from the server.
 
 
 

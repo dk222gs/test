@@ -349,9 +349,11 @@ Responsible for the complete test project.
 
 ### TC1 - Start Web Server
 Description: Administrator should successfully start the webserver.
+
 ##### Preconditions: 
  - User have admin priviledges
  - MyWebServer project is opened as a project in eclipse
+
 ##### Assumption: 
 Eclipse is installed.
 
@@ -373,10 +375,12 @@ Accept
 ```
 ### TC2 - Start Web Server
 Description: Administrator should successfully start the webserver.
+
 ##### Preconditions: 
  - User have admin priviledges
  - MyWebServer project is opened as a project in eclipse
  - MyWebServer is started on port *1091*
+
 ##### Assumption: 
 Eclipse is installed.
 
@@ -395,3 +399,7 @@ Eclipse is installed.
 HTTP Server object constructed
 Port is taken
 ```
+
+
+
+

@@ -347,7 +347,7 @@ Responsible for the complete test project.
 
 # Test Cases
 
-* [TC1 - Start Web Server](#TC1---Start-Web-Server)
+* [TC1 - Start Web Server](#tc1---start-web-server)
 * [TC2 - Start Web Server - Alt. scenario 1](#TC2---Start-Web-Server---Alt.-scenario-1)
 * [TC3 - Start Web Server - Alt scenario 2](#TC3---Start-Web-Server---Alt-scenario-2)
 * [TC4 - Start Web Server - Alt scenario 3](#TC4---Start-Web-Server---Alt-scenario-3)

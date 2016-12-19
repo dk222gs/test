@@ -518,6 +518,37 @@ Chrome is opened with the developer tools `network`tab in focus.
   - ``` Request URL: http://localhost:1091/images/works.png``` shall have status code `404`
   - ``` Request URL:http://localhost:1091/images/works2.png```shall have the status code `200`
 
+### TC8 - Request shared resource - Alt scenario 2
+Description: A shared resource is outside of the shared resource directory.
+
+##### Preconditions: 
+ - Chrome browser is used.
+
+##### Assumption: 
+Chrome is opened with the developer tools `network`tab in focus.
+
+##### Test Steps:
+1. Move the file `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner/images/work.png` to `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http`
+1. Edit the file `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner/index.html` to:
+```html
+<html>
+<body>
+<h1>It works</h1>
+<img src="./../../works.png"/>
+<img src="images/works2.png"/>
+
+</body>
+</html>
+```
+3. Start the MyWebServer from eclipse.
+4. Browse to `localhost:1091`
+
+##### Expected Result:
+* Chrome browser shall show the text `It works`and the image works2.png.
+* The log displayed in the eclipse `console`tab shall display `resource work.png is forbidden since it is not in the shared resources directory`
+
+
+
 
 
 

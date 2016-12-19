@@ -574,7 +574,9 @@ The user have access to use curl commands on client.
 
 # Test Report
 
+### Component and Integration Test Cases
 
+![JUnit-result](images/junit-test-result.jpg)
 
 ### Manual Test Cases
 

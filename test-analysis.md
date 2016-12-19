@@ -11,8 +11,8 @@ This report contains a detailed test strategy, test plan, test cases and test re
 ###  Table of contents
 * [Test Strategy](#test-strategy)
 * [Test Plan](#test-plan)
-* [Test Cases](#Test Cases)
-* [Test Report](#Test Report)
+* [Test Cases](#test-cases)
+* [Test Report](#test-report)
 
 ___
 

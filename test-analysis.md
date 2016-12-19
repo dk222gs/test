@@ -348,15 +348,15 @@ Responsible for the complete test project.
 # Test Cases
 
 * [TC1 - Start Web Server](#tc1---start-web-server)
-* [TC2 - Start Web Server - Alt. scenario 1](#TC2---Start-Web-Server---Alt.-scenario-1)
-* [TC3 - Start Web Server - Alt scenario 2](#TC3---Start-Web-Server---Alt-scenario-2)
-* [TC4 - Start Web Server - Alt scenario 3](#TC4---Start-Web-Server---Alt-scenario-3)
-* [TC5 - Stop Web Server](#TC5---Stop-Web-Server)
-* [TC6 - Request shared resource](#TC6---Request-shared-resource)
-* [TC7 - Request shared resource - Alt scenario 1](#TC7---Request-shared-resource---Alt-scenario-1)
-* [TC8 - Request shared resource - Alt scenario 2](#TC8---Request-shared-resource---Alt-scenario-2)
-* [TC9 - Request shared resource - Alt scenario 3](#TC9---Request-shared-resource---Alt-scenario-3)
-* [TC10 - Request shared resource - Alt scenario 4](#TC10---Request-shared-resource---Alt-scenario-4)
+* [TC2 - Start Web Server - Alt. scenario 1](#tc2---start-web-server---alt.-scenario-1)
+* [TC3 - Start Web Server - Alt scenario 2](#tc3---start-web-server---alt-scenario-2)
+* [TC4 - Start Web Server - Alt scenario 3](#tc4---start-web-server---alt-scenario-3)
+* [TC5 - Stop Web Server](#tc5---stop-web-server)
+* [TC6 - Request shared resource](#tc6---request-shared-resource)
+* [TC7 - Request shared resource - Alt scenario 1](#tc7---request-shared-resource---alt-scenario-1)
+* [TC8 - Request shared resource - Alt scenario 2](#tc8---request-shared-resource---alt-scenario-2)
+* [TC9 - Request shared resource - Alt scenario 3](#tc9---request-shared-resource---alt-scenario-3)
+* [TC10 - Request shared resource - Alt scenario 4](#tc10---request-shared-resource---alt-scenario-4)
 
 ### TC1 - Start Web Server
 Description: Administrator should successfully start the webserver.

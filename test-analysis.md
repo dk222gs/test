@@ -9,10 +9,10 @@ This report contains a detailed test strategy, test plan, test cases and test re
 
 
 ###  Table of contents
-* [Test Strategy](#test-strategy)
-* [Test Plan](#test-plan)
-* [Test Cases](#test-cases)
-* [Test Report](#test-report)
+[Test Strategy](#test-strategy)
+[Test Plan](#test-plan)
+[Test Cases](#test-cases)
+[Test Report](#test-report)
 
 ___
 
@@ -576,6 +576,7 @@ The user have access to use curl commands on client.
 
 ### Component and Integration Test Cases
 
+Since it's not possible to upload images to the review system, imagine a screenshot of the all the JUnit test cases run from eclipe with results.
 ![result](images/junit-test-result.png)
 
 There is one failing test in the integration tests:

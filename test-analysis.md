@@ -503,7 +503,7 @@ Chrome is opened.
 1. Browse to `localhost:1091`
 
 ##### Expected Result:
-* * Chrome browser shall show the text `It works`, the image works.png and the imaget works2.png.
+* Chrome browser shall show the text `It works`, the image works.png and the imaget works2.png.
 
 * In eclipse, in the console view shall show information that access happened with request information and the result of the request.
 
@@ -532,31 +532,7 @@ Chrome is opened with the developer tools `network`tab in focus.
 ### TC8 - Request shared resource - Alt scenario 2
 Description: A shared resource is outside of the shared resource directory.
 
-##### Preconditions: 
- - Chrome browser is used.
-
-##### Assumption: 
-Chrome is opened with the developer tools `network`tab in focus.
-
-##### Test Steps:
-1. Move the file `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner/images/work.png` to `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http`
-1. Edit the file `*path_to_MyWebServer_project_root*/WebServer/tests/se/lnu/http/resources/inner/index.html` to:
-```html
-<html>
-<body>
-<h1>It works</h1>
-<img src="./../../works.png"/>
-<img src="images/works2.png"/>
-
-</body>
-</html>
-```
-3. Start the MyWebServer from eclipse.
-4. Browse to `localhost:1091`
-
-##### Expected Result:
-* Chrome browser shall show the text `It works`and the image works2.png.
-* The log displayed in the eclipse `console`tab shall display `resource work.png is forbidden since it is not in the shared resources directory`
+UC 2b: The shared resource is outside the shared resource container is not a valid UC since the shared resource container is the root of the application and the client cannot access anything outside of the resource container by default.
 
 ### TC9 - Request shared resource - Alt scenario 3
 Description: A shared resource request is invalid or malformed.
@@ -593,5 +569,26 @@ The user have access to use curl commands on client.
 ##### Expected Result:
 * The console should display that you get a response code `500`back from the server.
 
+---
+---
+
+# Test Report
+
+
+
+### Manual Test Cases
+
+| Test Case ID                                   | Date Tested | Tester   | Pass/Fail | Severity of Defect | Summary of Defect                                                                 | Comments                                                                                                                                                              |
+|------------------------------------------------|-------------|----------|-----------|--------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TC1 - Start Web Server                         | 18-12-16    | John Doe | Pass      | -                  | -                                                                                 | -                                                                                                                                                                     |
+| TC2 - Start Web Server - Alt. scenario 1       | 18-12-16    | John Doe | Pass      | -                  | -                                                                                 | -                                                                                                                                                                     |
+| TC3 - Start Web Server - Alt scenario 2        | 18-12-16    | John Doe | Pass      | -                  | -                                                                                 | -                                                                                                                                                                     |
+| TC4 - Start Web Server - Alt scenario 3        | 18-12-16    | John Doe | Fail      | low                | MyWebServer is not saving the access logs to a file.                              | Create bug report to dev team to implement functionality to store access logs to file under the path path_to_MyWebServer_project_root/logs                            |
+| TC5 - Stop Web Server                          | 18-12-16    | John Doe | Fail      | low                | MyWebServer is not printing a note to the access log that the server was stopped. | Create bug report to dev team to implement functionality to print the message `Server successfully stopped`to the access log when server stops.                       |
+| TC6 - Request shared resource                  | 18-12-16    | John Doe | Fail      | low                | MyWebServer is not printing request and response information to the access log.   | Create bug report to dev team to implement functionality to print the message information on the request and response to the access log.                              |
+| TC7 - Request shared resource - Alt scenario 1 | 18-12-16    | John Doe | Pass      | -                  | -                                                                                 | -                                                                                                                                                                     |
+| TC8 - Request shared resource - Alt scenario 2 | 18-12-16    | John Doe | Fail      | -                  | -                                                                                 | Not a valid UC since the shared resource container is the root of the application and the client cannot access anything outside of the resource container by default. |
+| TC9 - Request shared resource - Alt scenario 3 | 18-12-16    | John Doe | Pass      | -                  | -                                                                                 | -                                                                                                                                                                     |
+| TC10 -Request shared resource - Alt scenario 4 | 18-12-16    | John Doe | Fail      | Medium             | MyWebServer does not support the response code 500.                               | Create bug report to dev team to implement functionality to support response code 500 and so that when an unknown error occurs the server shall respond with a 500.   |
 
 

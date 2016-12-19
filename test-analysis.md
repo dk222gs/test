@@ -578,6 +578,11 @@ The user have access to use curl commands on client.
 
 ![result](images/junit-test-result.png)
 
+There is one failing test in the integration tests:
+- SocketClientTest.testGetFromOnlineServer
+    - Problem is that the server 194.47.172.159 is not online
+    - **ACTION**: Create ticket with IT to make sure this server is online.
+
 ### Manual Test Cases
 
 | Test Case ID                                   | Date Tested | Tester   | Pass/Fail | Severity of Defect | Summary of Defect                                                                 | Comments                                                                                                                                                              |

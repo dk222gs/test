@@ -53,7 +53,7 @@ ___
 
 ## 2. Roles
 **Test lead**: Responsible for testing and for creating this documentation
-**Product owener:** Expert in the bussiness logic for Software Development Company (SDC).
+**Product owner:** Expert in the bussiness logic for Software Development Company (SDC).
 
 ## 3. Introduction
 

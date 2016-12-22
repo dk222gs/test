@@ -576,10 +576,110 @@ The user have access to use curl commands on client.
 
 ### Component and Integration Test Cases
 
-Since it's not possible to upload images to the review system, imagine a screenshot of the all the JUnit test cases run from eclipe with results.
-![result](images/junit-test-result.png)
+Since it's not possible to upload images to the review system, here is a xml export from the testrun of the unit and integration tests. No <error> tag means that the test is a PASS:
+
+<testrun name="tests" project="MyWebServer" tests="57" started="57" failures="0" errors="1" ignored="0">
+<testsuite name="se.lnu.http.ClientThreadTest" time="0.164">
+    <testcase name="testMalformed" classname="se.lnu.http.ClientThreadTest" time="0.153"/>
+    <testcase name="testRun" classname="se.lnu.http.ClientThreadTest" time="0.009"/>
+    <testcase name="testMultipleConnections" classname="se.lnu.http.ClientThreadTest" time="0.002"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.integration.SocketClientTest" time="0.01">
+    <testcase name="testGetFromOnlineServer" classname="se.lnu.http.integration.SocketClientTest" time="0.01">
+      <error>java.net.ConnectException: Connection refused </error>
+    </testcase>
+  </testsuite>
+  <testsuite name="se.lnu.http.AcceptThreadTest" time="0.055">
+    <testcase name="testStopmeNotRunning" classname="se.lnu.http.AcceptThreadTest" time="0.018"/>
+    <testcase name="testrun" classname="se.lnu.http.AcceptThreadTest" time="0.033"/>
+    <testcase name="testsocketfailed" classname="se.lnu.http.AcceptThreadTest" time="0.003"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.response.ErrorResponses" time="0.005">
+    <testcase name="test400" classname="se.lnu.http.response.ErrorResponses" time="0.005"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.response.HTMLFileResponseTest" time="0.028">
+    <testcase name="testWriteResponse" classname="se.lnu.http.response.HTMLFileResponseTest" time="0.028"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.HTTPReaderTest" time="0.01">
+    <testcase name="testbroken" classname="se.lnu.http.HTTPReaderTest" time="0.008"/>
+    <testcase name="testbroken2" classname="se.lnu.http.HTTPReaderTest" time="0.001"/>
+    <testcase name="testReadBody" classname="se.lnu.http.HTTPReaderTest" time="0.001"/>
+    <testcase name="testReadOk" classname="se.lnu.http.HTTPReaderTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.HTTPRequestTest" time="0.001">
+    <testcase name="testGetURL" classname="se.lnu.http.HTTPRequestTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.HTTPRequestParserTest" time="0.001">
+    <testcase name="testMalformedRequest" classname="se.lnu.http.HTTPRequestParserTest" time="0.0"/>
+    <testcase name="testMalformedRequestEmpty" classname="se.lnu.http.HTTPRequestParserTest" time="0.0"/>
+    <testcase name="testMalformedRequest2" classname="se.lnu.http.HTTPRequestParserTest" time="0.0"/>
+    <testcase name="testParseRequest" classname="se.lnu.http.HTTPRequestParserTest" time="0.001"/>
+    <testcase name="testMalformedRequestNoHost" classname="se.lnu.http.HTTPRequestParserTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.PortTest" time="0.001">
+    <testcase name="testPort0" classname="se.lnu.http.PortTest" time="0.0"/>
+    <testcase name="testPortTooLarge" classname="se.lnu.http.PortTest" time="0.001"/>
+    <testcase name="testPortOk" classname="se.lnu.http.PortTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.ClientSocketTest" time="0.002">
+    <testcase name="testWriteResponseBody" classname="se.lnu.http.ClientSocketTest" time="0.001"/>
+    <testcase name="testWriteResponseHeader" classname="se.lnu.http.ClientSocketTest" time="0.0"/>
+    <testcase name="testGetRequest" classname="se.lnu.http.ClientSocketTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.ResponseFactoryTest" time="0.015">
+    <testcase name="getBad" classname="se.lnu.http.ResponseFactoryTest" time="0.01"/>
+    <testcase name="testUnknownMethod" classname="se.lnu.http.ResponseFactoryTest" time="0.002"/>
+    <testcase name="testGetResponseGETRoot" classname="se.lnu.http.ResponseFactoryTest" time="0.001"/>
+    <testcase name="testGetResponseUnexistingFile" classname="se.lnu.http.ResponseFactoryTest" time="0.001"/>
+    <testcase name="testIllegalFile" classname="se.lnu.http.ResponseFactoryTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.HeaderTest" time="0.0">
+    <testcase name="testFromString" classname="se.lnu.http.HeaderTest" time="0.0"/>
+    <testcase name="testFromString2" classname="se.lnu.http.HeaderTest" time="0.0"/>
+    <testcase name="testFromString3" classname="se.lnu.http.HeaderTest" time="0.0"/>
+    <testcase name="testFromString4" classname="se.lnu.http.HeaderTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.SharedFolderTest" time="0.002">
+    <testcase name="testGetNonExistantFile" classname="se.lnu.http.SharedFolderTest" time="0.001"/>
+    <testcase name="testGetIllegalFile" classname="se.lnu.http.SharedFolderTest" time="0.0"/>
+    <testcase name="testGetRootURL" classname="se.lnu.http.SharedFolderTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.integration.HTTPServerTest" time="0.214">
+    <testcase name="testStart" classname="se.lnu.http.integration.HTTPServerTest" time="0.105"/>
+    <testcase name="testStop" classname="se.lnu.http.integration.HTTPServerTest" time="0.108"/>
+    <testcase name="testHTTPServer" classname="se.lnu.http.integration.HTTPServerTest" time="0.0"/>
+    <testcase name="testStopWhenNotStarted" classname="se.lnu.http.integration.HTTPServerTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.integration.StressTest" time="3.114">
+    <testcase name="stressTest" classname="se.lnu.http.integration.StressTest" time="3.114"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.response.ContentTypeTest" time="0.0">
+    <testcase name="testGetFromFileEnding" classname="se.lnu.http.response.ContentTypeTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.HTTPServerConsoleTest" time="0.02">
+    <testcase name="testrunConsoleNoPort" classname="se.lnu.http.HTTPServerConsoleTest" time="0.017"/>
+    <testcase name="testrunConsolePort80" classname="se.lnu.http.HTTPServerConsoleTest" time="0.001"/>
+    <testcase name="runOnTakenPort" classname="se.lnu.http.HTTPServerConsoleTest" time="0.002"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.ServerFactoryTest" time="0.001">
+    <testcase name="testCreate" classname="se.lnu.http.ServerFactoryTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="se.lnu.http.view.ConsoleViewTest" time="0.002">
+    <testcase name="testNoArguments" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testOkDirectory" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testNotADirectory1" classname="se.lnu.http.view.ConsoleViewTest" time="0.001"/>
+    <testcase name="testDoNotStop" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testShowhelp" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testDoStop" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testOkPort" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testCrapArgument1" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testCrapArgument2" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+    <testcase name="testPortTaken" classname="se.lnu.http.view.ConsoleViewTest" time="0.0"/>
+  </testsuite>
+</testrun>
 
 There is one failing test in the integration tests:
+
 - SocketClientTest.testGetFromOnlineServer
     - Problem is that the server 194.47.172.159 is not online
     - **ACTION**: Create ticket with IT to make sure this server is online.
